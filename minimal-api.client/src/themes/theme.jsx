@@ -1,10 +1,12 @@
 import React, { useEffect,useState } from 'react';
 import axios from 'axios';
+import light from '../assets/bannerImg.jpg'
+import dark from '../assets/DarkTheme.jpg'
 function Theme() {
     const [theme, settheme] = useState("");
     const [color, setcolor] = useState("");
     useEffect(() => {
-        const tenantId =1;
+        const tenantId = 2;  // please change Id to Change theme. I added  2 themes Light theme id =1, Dark theme id = 2 and themes will be change with following api call. 
         const fetchData = () => {
             axios.get(`https://localhost:7082/api/tenants/${tenantId}`)
                 .then(response => {
@@ -60,7 +62,7 @@ function Theme() {
                     </div>
                 </div>
             </nav>
-            <img src={'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4wB6X?ver=c628'} width="100%" alt="BigCo Inc. logo" />
+            <img src={color === "black" ? light : dark } width="100%" alt="home" />
         </div>
     );
 }

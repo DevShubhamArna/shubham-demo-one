@@ -23,9 +23,4 @@
     </ProjectReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DbContext\" />
-    <Folder Include="Helpers\" />
-  </ItemGroup>
-
 </Project>
